@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>doi tien</title>
+</head>
+<body>
+	<form>
+		<table style="width:600px">
+			<tr>
+				<th>Amount</th>
+				<th align="left">From Currency</th>
+				<th align="left">To Currency</th>
+
+			</tr>
+			<tr>
+				<td>
+					<input type="number" name="amount" id="amount">
+				</td>
+				<td>
+					<select id="from">
+						<option value="VietNam">VietNam</option>
+						<option value="USD">USD</option>
+					</select>
+				</td>
+				<td>
+					<select id="to">
+						<option value="USD">USD</option>
+						<option value="VietNam">VietNam</option>
+					</select>
+				</td>
+				<td>
+					
+				</td>
+			</tr>
+		</table>
+	</form>
+	<input type="button" name="convert" value="Convert" style="background-color: blue;" onclick="doiTien()">
+	<p id="result"></p>
+	<script type="text/javascript">
+		function doiTien() {
+			let from = document.getElementById('from').value
+			let to = document.getElementById('to').value
+			let money = document.getElementById("amount").value
+			
+			if(from === "VietNam" && to === "USD"){
+				money = money / 23000
+			}
+			if(from === "USD" && to === "VietNam"){
+				money = money * 23000
+			}
+			document.getElementById("result").innerHTML = "result : "+money+ " " + to;
+		}
+		
+	</script>
+
+</body>
+</html>
