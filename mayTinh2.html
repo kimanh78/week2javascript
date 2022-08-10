@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>may tinh</title>
+</head>
+<body>
+	<input type="number" name="number 1" id="number1">
+	<input type="number" name="number 2" id="number2"><br><br>
+	<button onclick="cong()" id="cong">cong</button>
+	<button onclick="tru()" id="tru">tru</button>
+	<button onclick="nhan()">nhan</button>
+	<button onclick="chia()">chia</button>
+
+	<p id="ketqua" ></p>
+	<script type="text/javascript">
+		function cong(){
+			var a = parseInt(document.getElementById('number1').value);
+			var b = parseInt(document.getElementById('number2').value);
+			var ketqua = a+b;
+				document.getElementById('ketqua').innerHTML = ketqua
+		}
+		function tru(){
+			var a = parseInt(document.getElementById('number1').value);
+			var b = parseInt(document.getElementById('number2').value);
+			var ketqua = a-b;
+				document.getElementById('ketqua').innerHTML = ketqua
+		}
+		function nhan(){
+			var a = parseInt(document.getElementById('number1').value);
+			var b = parseInt(document.getElementById('number2').value);
+			var ketqua = a*b;
+				document.getElementById('ketqua').innerHTML = ketqua
+		}
+		function chia(){
+			var a = parseInt(document.getElementById('number1').value);
+			var b = parseInt(document.getElementById('number2').value);
+			var ketqua = a/b;
+				document.getElementById('ketqua').innerHTML = ketqua
+		}
+		
+			
+	</script>
+	
+</body>
+</html>
